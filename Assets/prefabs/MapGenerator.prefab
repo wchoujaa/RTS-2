@@ -1,0 +1,156 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1950679232720490853
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1950679232720490138}
+  - component: {fileID: 1950679232720490139}
+  - component: {fileID: 1950679232720490852}
+  m_Layer: 0
+  m_Name: MapGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1950679232720490138
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950679232720490853}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1950679232720490139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950679232720490853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 707db4ffc51587247a038321f1b64afd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drawMode: 2
+  mapWidth: 255
+  mapHeight: 255
+  noiseScale: 66.81
+  octaves: 5
+  persistence: -0.5
+  lacunarity: 1.81
+  seed: 3
+  offset: {x: 0, y: 0}
+  useFalloff: 1
+  meshHeightMultiplier: 100
+  meshHeightCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0.47447777
+      outSlope: 0.47447777
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.08357449
+      value: 0.039654236
+      inSlope: 0.0053175827
+      outSlope: 0.0053175827
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.7975092
+      value: 0.045433987
+      inSlope: 0.019283323
+      outSlope: 0.019283323
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.51209664
+      outWeight: 0.22196695
+    - serializedVersion: 3
+      time: 0.79920226
+      value: 0.088404536
+      inSlope: 1.8221365
+      outSlope: 1.8221365
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.43675402
+      outWeight: 0.6380428
+    - serializedVersion: 3
+      time: 0.88602704
+      value: 0.2605499
+      inSlope: 2.1006773
+      outSlope: 2.1006773
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.2148835
+    - serializedVersion: 3
+      time: 1
+      value: 0.48825073
+      inSlope: 1.9978496
+      outSlope: 1.9978496
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  autoUpdate: 1
+  regions:
+  - name: Water
+    height: 0
+    color: {r: 0, g: 0.42745098, b: 0.9490196, a: 0}
+  - name: Sand
+    height: 0.2
+    color: {r: 0.7529412, g: 0.6745098, b: 0.5529412, a: 0}
+  - name: LowLands
+    height: 0.67
+    color: {r: 0.21568628, g: 0.5411765, b: 0.24313726, a: 0}
+  - name: HighLands
+    height: 0.75
+    color: {r: 0.13725491, g: 0.34509805, b: 0.15686275, a: 0}
+  - name: Cliffs
+    height: 0.85
+    color: {r: 0.42352942, g: 0.45882353, b: 0.41960785, a: 0}
+  - name: Mountains
+    height: 0.95
+    color: {r: 0.21176471, g: 0.25490198, b: 0.24313726, a: 0}
+  - name: Peaks
+    height: 1
+    color: {r: 0.9647059, g: 0.96862745, b: 0.92156863, a: 0}
+--- !u!114 &1950679232720490852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950679232720490853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ef370361daeddd4886cdc105528bb4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textureRenderer: {fileID: 0}
+  meshFilter: {fileID: 0}
+  meshRenderer: {fileID: 0}
+  meshCollider: {fileID: 0}

@@ -26,7 +26,7 @@ public class GenerateTrees : MonoBehaviour
     public bool autoUpdate;
 
     List<GameObject> tree_list;
-
+    public GameObject TreeParent;
     //populate with items
     public void generateTrees()
     {
@@ -65,7 +65,7 @@ public class GenerateTrees : MonoBehaviour
                     if (Physics.Raycast(origin,-Vector3.up,out hit,Mathf.Infinity,(1<<8)))
                     {
                         if (hit.point.y > minHeight && hit.point.y < maxHeight) {
-                            temp = Instantiate(prefab, new Vector3(hit.point.x + Random.Range(-3.33f, 3.33f),hit.point.y -0.5f, hit.point.z + Random.Range(-3.33f, 3.33f)), new Quaternion());
+                            temp = Instantiate(prefab, new Vector3(hit.point.x + Random.Range(-3.33f, 3.33f),hit.point.y -0.5f, hit.point.z + Random.Range(-3.33f, 3.33f)), new Quaternion(), TreeParent.transform);
                             tree_list.Add(temp);
                             //Instantiate(prefab, new Vector3(x + 0.5f, -0.5f, z + 0.5f), new Quaternion());
                         }
@@ -79,7 +79,7 @@ public class GenerateTrees : MonoBehaviour
                     {
                         if (hit.point.y > 4.0f && hit.point.y < 8f)
                         {
-                            temp = Instantiate(prefab, new Vector3(hit.point.x + Random.Range(-3.33f, 3.33f), hit.point.y - 0.5f, hit.point.z + Random.Range(-3.33f, 3.33f)), new Quaternion());
+                            temp = Instantiate(prefab, new Vector3(hit.point.x + Random.Range(-3.33f, 3.33f), hit.point.y - 0.5f, hit.point.z + Random.Range(-3.33f, 3.33f)), new Quaternion(), TreeParent.transform);
                             tree_list.Add(temp);
                             //Instantiate(prefab, new Vector3(x + 0.5f, -0.5f, z + 0.5f), new Quaternion());
                         }
